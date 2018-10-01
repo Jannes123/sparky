@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
-    <a href="{% url 'demo' %}">Create New</a>
+    <a href="{% url 'atm-list' %}">Create New</a>
     <br>
     {% if object_list %}
-        {% for post in object_list %}
-            <span>{{ post.title }}</span>
-            <p>{{ post.body }}</p>
+        {% for message in object_list %}
+            <span> source : {{ message.source }}</span>
+            <p>message : {{ message.payload }}</p>
                 <hr>
         {% endfor %}
     {% endif %}

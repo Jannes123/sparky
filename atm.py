@@ -37,5 +37,6 @@ def send_message_two():
     s1.close()
 
 if __name__ == '__main__':
-    send_message_one()
-    send_message_two()
+    for i in range(1,11):
+        send_message_one()
+        send_message_two()

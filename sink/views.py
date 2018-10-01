@@ -9,3 +9,4 @@ from django.views.generic import ListView
 class ViewListPost(ListView):
     queryset = Messages.objects.all()
     template_name = 'list.html'
+
