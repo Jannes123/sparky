@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+    <a href="{% url 'demo' %}">Create New</a>
+    <br>
+    {% if object_list %}
+        {% for post in object_list %}
+            <span>{{ post.title }}</span>
+            <p>{{ post.body }}</p>
+                <hr>
+        {% endfor %}
+    {% endif %}
+{% endblock %}
